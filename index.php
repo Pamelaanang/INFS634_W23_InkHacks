@@ -1,5 +1,7 @@
 <?php
 include("Assets/css/Mystyle.css");
+include('header.php');
+include('header.php'); 
 ?>
 <!Doctype html>
 <html lang="en">
