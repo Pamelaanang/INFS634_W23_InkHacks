@@ -1,23 +1,4 @@
-<!DOCTYPE HTML>
-<html>
 
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
-
-  <style type="text/css">
-    body {
-      color: white;
-      font-family: 'Source Serif Pro';
-    }
-
-    #wrap-x {
-      background-color: #017CDA;
-      
-    }
-  </style>
-</head>
-
-<body>
   <div class="wrapper" id='wrap-x'>
     <!-- <div class="card-header">
   </div> -->
@@ -92,6 +73,3 @@
 
     </div>
   </div>
-</body>
-
-</html>

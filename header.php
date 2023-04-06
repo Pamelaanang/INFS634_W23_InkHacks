@@ -1,33 +1,4 @@
-<!Doctype HTML>
-<html>
-
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
-  <style type="text/css">
-    .container-fluid {
-      background-color: #017CDA;
-      color: white;
-      font-family: 'Source Serif Pro';
-    }
-
-    .navbar {
-      background-color: #017CDA;
-      color: white;
-      font-family: 'Source Serif Pro';
-    }
-
-    .nav-item {
-      color: white;
-      font-family: 'Source Serif Pro';
-    }
-  </style>
-</head>
-
-<body>
-  <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary" style="padding-y: 0rem !important">
     <div class="container-fluid" id="navbar">
       <div class="navbar-header">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
@@ -74,7 +45,3 @@
       </div>
     </div>
   </nav>
-</body>
-
-
-</html>
