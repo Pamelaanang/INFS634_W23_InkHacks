@@ -27,16 +27,16 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" style='color:white;font-family:Source Serif Pro; padding-right: 50px'
-              href="#">Faculty</a>
+              href="faculty.php">Faculty</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" style='color:white;font-family:Source Serif Pro; padding-left: 50px'
               href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               Login
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" style='color:white;font-family:Source Serif Pro;' href="#">Sign In</a></li>
-              <li><a class="dropdown-item" style='color:white;font-family:Source Serif Pro;' href="#">Sign Up</a></li>
+            <ul class="dropdown-menu" style='background-color;#FEBA33'>
+              <li><a class="dropdown-item" style='color:black;font-family:Source Serif Pro;' href="login.php">Sign In</a></li>
+              <li><a class="dropdown-item" style='color:black;font-family:Source Serif Pro;' href="signup.php">Sign Up</a></li>
             </ul>
           </li>
         </ul>

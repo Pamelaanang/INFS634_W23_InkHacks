@@ -1,33 +1,54 @@
 .container-fluid {
-    background-color: #017CDA;
-    color: white;
-    font-family: 'Source Serif Pro';
-  }
+  background-color: #017CDA;
+  color: white;
+  font-family: 'Source Serif Pro';
+}
 
-  .navbar {
-    background-color: #017CDA;
-    color: white;
-    font-family: 'Source Serif Pro';
-  }
+.navbar {
+  background-color: #017CDA;
+  color: white;
+  font-family: 'Source Serif Pro';
+}
 
-  .nav-item {
-    color: white;
-    font-family: 'Source Serif Pro';
-  }
+.nav-item {
+  color: white;
+  font-family: 'Source Serif Pro';
+}
 
-  #card-im {
-    background-color: #FEBA33;
-    color: black;
-    font-family: 'Source Serif Pro';
+#card-im {
+  background-color: #FEBA33;
+  color: black;
+  font-family: 'Source Serif Pro';
 
-  }
+}
 
-  body {
-    color: white;
-    font-family: 'Source Serif Pro';
-  }
+body {
+  color: white;
+  font-family: 'Source Serif Pro';
+}
 
-  #wrap-x {
-    background-color: #017CDA;
-    
-  }
+#wrap-x {
+  background-color: #017CDA;
+
+}
+
+#card-im {
+  background-color: #FEBA33;
+  color: black;
+  font-family: 'Source Serif Pro';
+
+}
+
+#cfluid {
+  background-color: #E6E6E6;
+  color: black;
+  font-family: 'Source Serif Pro';
+
+}
+
+.floatRightClear {
+  float: right;
+  clear: right;
+
+}
+

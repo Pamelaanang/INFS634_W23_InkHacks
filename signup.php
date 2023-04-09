@@ -1,8 +1,32 @@
 <?php
 
-include('header.php');
-?>
+date_default_timezone_set('America/Toronto'); //setting default timezone
+$date = new DateTime(); //Creating a variable for DateTime
+$TimeDate = $date->format('Y-m-d H:i:s'); 
 
+
+
+require 'Settings/db_login.php'; //load credentials 
+
+if(!empty($_POST['email']) && !empty($_POST['password'])){ //check if email and password is submitted using POST method
+
+    $password=password_hash($_POST['password'], PASSWORD_DEFAULT); //PHP Hashing for password
+    //Extracting data from the database 
+    $sql = "INSERT INTO `lecturers` (`l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`, `l_photo`) 
+    VALUES (NULL, '".$_POST['l_name']."', '".$_POST['l_email']."', '".$_POST['l_number']."', '".$password."', '".$_POST['l_description']."', '".$_POST['l_photo']."')";
+    $stmt = $conn->prepare($sql);
+    //Creating New Event
+    if( $stmt->execute() ){  //executing query to update the database 
+
+        $message="Account Created"; //Message to show account was created
+    } else {
+            $message="Error was encountered in creating account."; //Message to show error in creating account 
+		}
+    }
+
+include('header.php'); 
+
+ ?>
 
 <!Doctype html>
 <html lang="en">
@@ -35,48 +59,23 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container' style='padding-left:100px'>
-                <div class='row'>
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" src="Assets/img/under.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Undergraduate</center>
-                        </div>
-                    </div>
+                
 
-
-                    <div style="width:5rem;"> </div>
-
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" height='200px' src="Assets/img/Graduate.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Graduate</center>
-                        </div>
-                    </div>
-
-                    <div style="width:5rem;"> </div>
-
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" src="Assets/img/diploma.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Certifications & Diplomas</center>
-                        </div>
-                    </div>
-                </div>
+                    
+                    
+                
             </div>
         </div>
     </div>
     <br>
 
 
-    </div>
-    </div>
-
     <?php include('footer.php'); ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
 </body>
-
 
 </html>

@@ -6,13 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ink Hacks</title>
   <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="Assets/css/Mystyle.css" />
 </head>
-<style>
- 
-</style>
 
 <body>
 <?php
@@ -63,8 +60,8 @@ include('header.php');
     <div class="wrapper">
       <div class='container'>
         <div class='row'>
-          <div class="card" id='card-im' style="width:18rem;height:15rem">
-            <img class="card-img-top" style='padding: 20px' src="Assets/img/lms.png" alt="Card image cap">
+          <div class="card" id='card-im' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+            <img class="card-img-top" style='padding:20px;' src="Assets/img/lms.png" alt="Card image cap">
             <div class="card-body">
               <center>What?</center>
             </div>
@@ -72,8 +69,8 @@ include('header.php');
 
           <div style="width:2rem;"> </div>
 
-          <div class="card" id='card-im' style="width:18rem;height:15rem;">
-            <img class="card-img-top" style='padding: 22px' src="Assets/img/learn.jpeg" alt="Card image cap">
+          <div class="card" id='card-im' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+            <img class="card-img-top" style='padding:22px;' src="Assets/img/learn.jpeg" alt="Card image cap">
             <div class="card-body">
               <center>When?</center>
             </div>
@@ -83,8 +80,8 @@ include('header.php');
         <br>
 
         <div class='row'>
-          <div class="card" id='card-im' style="width:18rem;height:15rem">
-            <img class="card-img-top" style='padding: 20px' height='180' width='45' src="Assets/img/2023.png"
+          <div class="card" id='card-im' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+            <img class="card-img-top" style='padding:20px;' height='180' width='45' src="Assets/img/2023.png"
               alt="Card image cap">
             <div class="card-body">
               <center>When?</center>
@@ -95,8 +92,8 @@ include('header.php');
 
           </div>
 
-          <div class="card" id='card-im' height='50px' style="width:18rem;height:15rem">
-            <img class="card-img-top" style='padding: 20px' src="Assets/img/des.jpeg" alt="Card image cap">
+          <div class="card" id='card-im' height='50px' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+            <img class="card-img-top" style='padding:20px;' src="Assets/img/des.jpeg" alt="Card image cap">
             <div class="card-body">
               <center>Who?</center>
             </div>
