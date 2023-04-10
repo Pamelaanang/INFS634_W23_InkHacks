@@ -1,8 +1,8 @@
 <?php
-$server = 'localhost:8888';
+$server = 'localhost:8889';
 $username = 'root';
-$password = '';
-$database = 'Ink_Hacks';
+$password = 'root';
+$database = 'Ink_hacks';
 
 
 try{

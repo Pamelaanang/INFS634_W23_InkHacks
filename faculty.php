@@ -19,16 +19,20 @@ include('header.php');
 </head>
 
 <body>
-    <div id="main">
+<div id="main">
         <div class='container-fluid' id='cfluid' style='border:1px solid black;'>
-            <div class='container'>
-                <div class="col-8" style='padding-left:15px;height: 20%;'>
+            <div class='row'>
+                <div class="col-10" style='padding-left:50px;height:20%;padding-top:20px'>
                     <br>
-                    <h2><b> McGill Schools </b></h2>
+                    <h2><b>Faculty </b></h2>
                     <small>Greater education</small>
-                    <!-- <img class="floatRight" src="Assets/img/under.webp" alt="Card image cap" height='100px' align='right;'> -->
+                </div>
+
+                <div class="col-2" style='text-align:right;padding-right:0px;'>
+                    <img id="floatRightClear" src="Assets/img/mgu.webp" alt="Card image cap" height='200px'>
                 </div>
             </div>
+
         </div>
 
         <br>
