@@ -10,7 +10,7 @@
           <div class="row">
             <!-- Footer Location-->
             <div class="col">
-              <h4 class="mb-4" >Footer</h4>
+              <h4 class="mb-4" ><strong>Footer</strong></h4>
             </div>
           </div>
           <div class="row">

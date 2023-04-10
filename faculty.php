@@ -19,7 +19,7 @@ include('header.php');
 </head>
 
 <body>
-<div id="main">
+    <div id="main">
         <div class='container-fluid' id='cfluid' style='border:1px solid black;'>
             <div class='row'>
                 <div class="col-10" style='padding-left:50px;height:20%;padding-top:20px'>
@@ -38,38 +38,44 @@ include('header.php');
         <br>
 
         <div class="wrapper">
-            <div class='container' style='padding-left:100px'>
+            <div class='container'>
                 <div class='row'>
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" src="Assets/img/under.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Undergraduate</center>
+                    <div class='col-4'>
+                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
+                            <img class="card" src="Assets/img/profile.webp" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Undergraduate</center>
+                            </div>
                         </div>
                     </div>
 
 
-                    <div style="width:5rem;"> </div>
 
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" height='200px' src="Assets/img/Graduate.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Graduate</center>
+                    <div class='col-4'>
+                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
+                            <img class="card"src="Assets/img/fac3.jpeg" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Graduate</center>
+                            </div>
                         </div>
                     </div>
 
-                    <div style="width:5rem;"> </div>
 
-                    <div class="card" id='card-im' style="width:20rem;border:1px solid black;border-radius:0px;">
-                        <img class="card" src="Assets/img/diploma.webp" alt="Card image cap" style='border:1px solid black;border-radius:0px;'>
-                        <div class="card-body">
-                            <center>Certifications & Diplomas</center>
+                    <div class='col-4'>
+                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
+                            <img class="card" src="Assets/img/fac33.jpeg" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Certifications & Diplomas</center>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
+        <br>
 
 
     </div>

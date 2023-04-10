@@ -4,23 +4,23 @@ date_default_timezone_set('America/Toronto'); //setting default timezone
 $date = new DateTime(); //Creating a variable for DateTime
 $TimeDate = $date->format('Y-m-d H:i:s');
 
-require 'Settings/db_login.php'; //load credentials 
+require 'Settings/db_class.php'; //load credentials 
 
-if (!empty($_POST['email']) && !empty($_POST['password'])) { //check if email and password is submitted using POST method
+// if (!empty($_POST['email']) && !empty($_POST['password'])) { //check if email and password is submitted using POST method
 
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //PHP Hashing for password
-    //Extracting data from the database 
-    $sql = "INSERT INTO `lecturers` (`l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`, `l_photo`) 
-    VALUES (NULL, '" . $_POST['l_name'] . "', '" . $_POST['l_email'] . "', '" . $_POST['l_number'] . "', '" . $password . "', '" . $_POST['l_description'] . "', '" . $_POST['l_photo'] . "')";
-    $stmt = $conn->prepare($sql);
-    //Creating New Event
-    if ($stmt->execute()) { //executing query to update the database 
+//     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //PHP Hashing for password
+//     //Extracting data from the database 
+//     $sql = "INSERT INTO `lecturers` (`l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`, `l_photo`) 
+//     VALUES (NULL, '" . $_POST['l_name'] . "', '" . $_POST['l_email'] . "', '" . $_POST['l_number'] . "', '" . $password . "', '" . $_POST['l_description'] . "', '" . $_POST['l_photo'] . "')";
+//     $stmt = $conn->prepare($sql);
+//     //Creating New Event
+//     if ($stmt->execute()) { //executing query to update the database 
 
-        $message = "Account Created"; //Message to show account was created
-    } else {
-        $message = "Error was encountered in creating account."; //Message to show error in creating account 
-    }
-}
+//         $message = "Account Created"; //Message to show account was created
+//     } else {
+//         $message = "Error was encountered in creating account."; //Message to show error in creating account 
+//     }
+// }
 
 include('header.php');
 
@@ -64,7 +64,7 @@ include('header.php');
                 <div class='row'>
                     <div class='col-6' style='background-color:#E6E6E6'>
                         <div class="form" style='margin:auto'>
-                            <form method='POST' enctype="multipart/form-data">
+                            <form method='POST' action="Functions/lec_function.php" enctype="multipart/form-data">
                                 <div class="form-group" style='padding-top:5%'>
                                     <input type="text" class="form-control" id="l_fname" name="l_fname"
                                         placeholder="Your Name">
@@ -92,7 +92,7 @@ include('header.php');
                                     </div>
                                     <div class='col-6'>
                                         <div class="form-group" style='padding-top:5%'>
-                                            <input type="password" class="form-control" id="l-pass" name="l-pass"
+                                            <input type="password" class="form-control" id="l_pass" name="l_pass"
                                                 placeholder="Retype Password">
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@ include('header.php');
                                     </div>
                                     <div class='col-6'>
                                         <div class="form-group" style='padding-top:5%'>
-                                            <input type="file" class="form-control" id="l-photo" name="l-pass"
+                                            <input type="file" class="form-control" id="l_photo" name="l_photo"
                                                 placeholder="Retype Password">
                                         </div>
                                     </div>

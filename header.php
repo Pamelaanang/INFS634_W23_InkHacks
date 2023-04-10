@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
   <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary" style="padding-y: 0rem !important">
     <div class="container-fluid" id="navbar">
       <div class="navbar-header">
@@ -38,6 +40,10 @@
               <li><a class="dropdown-item" style='color:black;font-family:Source Serif Pro;' href="login.php">Sign In</a></li>
               <li><a class="dropdown-item" style='color:black;font-family:Source Serif Pro;' href="signup.php">Sign Up</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style='color:#FEBA33;padding-left:220%;padding-top:12px;'
+              href="#"><i class="bi bi-search"></i></a>
           </li>
         </ul>
         <i class="fa-solid fa-magnifying-glass" style="color:#Feba33"></i>
