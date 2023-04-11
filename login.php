@@ -42,14 +42,14 @@ include('header.php');
                 <div class='row'>
                     <div class='col-6' style='background-color:#E6E6E6'>
                         <div class="form" style='margin:auto'>
-                            <form method='POST' enctype="multipart/form-data">
+                            <form method='POST' enctype="multipart/form-data" action="Functions/loginprocess.php">
                                 <div class="form-group" style='padding-top:5%; padding-left:27%'>
                                     <input type="email" class="form-control" id="l_email" name="l_email"
                                         placeholder="Email Address" style='width:60%' >
                                 </div>
                                 <div class="form-group" style='padding-top:5%; padding-left:27%'>
-                                    <input type="password" class="form-control" id="l_password" name="l_password"
-                                        placeholder="Your Name" style='width:60%'>
+                                    <input type="password" class="form-control" id="l_pass" name="l_pass"
+                                        placeholder="Passowrd" style='width:60%'>
                                 </div>
         
                                 <div class="form-element" style='padding-top:15px;padding-left:40%'>

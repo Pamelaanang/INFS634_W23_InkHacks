@@ -1,3 +1,12 @@
+<?php
+require('settings/core.php');
+
+$lec_id = get_lecturer_id();
+$l_ip= get_lec_IP();
+
+
+?>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
   <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary" style="padding-y: 0rem !important">

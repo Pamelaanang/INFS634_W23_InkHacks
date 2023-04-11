@@ -27,7 +27,7 @@ function get_lecturer_id(){
 	}
 }
 
-function get_user_IP(){
+function get_lec_IP(){
 	if ( !empty($_SERVER['HTTP_CLIENT_IP']) ) {
 	 // Check IP from internet.
 	 $ip = $_SERVER['HTTP_CLIENT_IP'];

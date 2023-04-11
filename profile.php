@@ -39,37 +39,34 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container'>
-                <div class='row'>
+                <div class='row' style='padding-left:50px'>
                     <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Undergraduate</center>
-                            </div>
+                        <div style='text-align:left; color:black; padding-top:50px'>
+                            Description
+                        </div>
+                        <div class='button' style='padding-top:100px;'>
+                            <input style='width:40%;height:15%;color:#FEBA33' name="e_pro" class="btn btn-dark"
+                                value="Edit Profile" type="" id="e_pro">
                         </div>
                     </div>
 
 
 
                     <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card"src="Assets/img/fac3.jpeg" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Graduate</center>
-                            </div>
+                        <div>
+                            <img height='200px' width='200px' src="Assets/img/fac3.jpeg" alt="Card image cap"
+                                style='border:1px solid black;border-radius:50%'>
                         </div>
                     </div>
 
 
                     <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card" src="Assets/img/fac33.jpeg" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Certifications & Diplomas</center>
-                            </div>
+                        <div style='text-align:left; color:black; padding-top:50px; padding-left:20px'>
+                            Description
+                        </div>
+                        <div class='button' style='padding-top:100px;padding-left:20px'>
+                            <input style='width:40%;height:15%;color:#FEBA33' name="e_pro" class="btn btn-dark"
+                                value="Edit Profile" type="" id="e_pro">
                         </div>
                     </div>
                 </div>
