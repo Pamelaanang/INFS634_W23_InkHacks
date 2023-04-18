@@ -18,6 +18,22 @@ function check_login(){
 	}
 }
 
+function check_lec_perm(){
+	
+    //get session role
+    if (isset($_SESSION['l_role'])) {
+     
+        //assign session to an array
+        $lperm = $_SESSION['l_role'];
+        if ($lperm == 2) {
+            //return role number
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+}
+
 //function to get lecturer id
 function get_lecturer_id(){
 	//check if login session userid exists

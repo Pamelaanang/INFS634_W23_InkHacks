@@ -57,19 +57,19 @@ include('header.php');
                 <h6 style='color:black'>Semesters</h6>
             </div>
             <div style='padding-left:38%'>
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:80px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
                     All</button>
 
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:80px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
                     Fall</button>
 
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:80px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
                     Winter</button>
 
-                <button style="background-color:#E6E6E6;width:90px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:90px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
                     Summer</button>
 

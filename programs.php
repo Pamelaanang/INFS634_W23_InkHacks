@@ -1,4 +1,5 @@
 <?php
+// require("Controllers/function_controller.php");
 
 include('header.php');
 ?>
@@ -35,7 +36,40 @@ include('header.php');
 
         </div>
 
+       
         <br>
+        <div class="wrapper">
+            <div class='container'>
+        <?php 
+        // $program = view_all_program_fuction();
+                            
+        //                     if ($program) {
+                                
+        //                         foreach ($program as $prog) {
+                   
+        //                             //grab program info
+        //                            $program_id = $prog['program_id'];
+        //                            $program_name = $prog['program_name'];
+        //                            $program_img = $prog['program_img'];
+   
+        //                            echo "<div class='row'>".
+        //                            '<div class="col-4">'.
+        //                                "<div class='card' id='card-im' style='border:1px solid black;border-radius:0px;'>".
+        //                                    '<img class="card" src="'.$program_img.'" alt="Card image cap"
+        //                                        style="border-bottom:1px solid black;border-radius:0px;">'.
+        //                                    "<div class='card-body'>".
+        //                                        '<center><a href="schools.php?program_id=$program_id" style="text-decoration: none; color:black" >'. $prog['program_name']. '</a></center>
+        //                                    </div>
+        //                                </div>
+        //                            </div>';
+   
+        //                         }
+   
+        //                        }
+   
+        //                    echo "</ul>";
+                       ?>
+
 
         <div class="wrapper">
             <div class='container'>

@@ -35,12 +35,17 @@ include('header.php');
 
                             <a href="schools.php" style='text-decoration:none; color:black'> Schools</a>
 
+                            <i class="bi bi-arrow-right"></i>
+
+                            <a href="courses.php" style='text-decoration:none; color:black'> Courses</a>
+
 
                             <i class="bi bi-arrow-right"></i>
 
                             <button onclick="window.location.href = '#';" class='btn btn-warning'
                                 style='padding-top:2px; height:30px;color:black; background-color:#FEBA33; border-radius:10px'>
-                                Courses</button>
+                                Type</button>
+
                         </div>
                     </div>
                 </div>
@@ -54,24 +59,24 @@ include('header.php');
 
         <div class='row'>
             <div style='text-align:center'>
-                <h6 style='color:black'>Semesters</h6>
+                <h6 style='color:black'>Type</h6>
             </div>
-            <div style='padding-left:38%'>
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+            <div style='padding-left:33%'>
+                <button style="background-color:#BFBFBF;width:120px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
-                    All</button>
+                    Assignments</button>
 
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:120px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
-                    Fall</button>
+                    Notes</button>
 
-                <button style="background-color:#E6E6E6;width:80px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:120px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
-                    Winter</button>
+                    Quizzes</button>
 
-                <button style="background-color:#E6E6E6;width:90px; height:30px;padding-top:2px;"
+                <button style="background-color:#BFBFBF;width:120px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
-                    Summer</button>
+                    Slides</button>
 
             </div>
         </div>
@@ -81,31 +86,46 @@ include('header.php');
         <div class="wrapper">
             <div class='container'>
                 <div class='row'>
-                    <div class='col-6'>
-                        <div class='row'
-                            style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
-                            <div class='col-4'>
-                                <img height='200px' width='200px' src="Assets/img/under.webp"
-                                    style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
-                            </div>
-                            <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
-                                <h3>Web Systems Design
-                                    & Management</h3>
-                                <p>INFS 634</p>
+                    <div class='col-3'>
+                        <div class="card" id='card-im'
+                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
+                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Proposal Guidelines From 2021</center>
                             </div>
                         </div>
                     </div>
-                    <div class='col-6'>
-                        <div class='row'
-                            style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
-                            <div class='col-4'>
-                                <img height='200px' width='200px' src="Assets/img/under.webp"
-                                    style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
+                    <div class='col-3'>
+                        <div class="card" id='card-im'
+                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
+                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Logo Assignment
+                                    Guidelines 2020</center>
                             </div>
-                            <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
-                                <h3>Web Systems Design
-                                    & Management</h3>
-                                <p>INFS 634</p>
+                        </div>
+                    </div>
+                    <div class='col-3'>
+                        <div class="card" id='card-im'
+                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
+                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Figma Assignment
+                                    Guidelines 2019</center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-3'>
+                        <div class="card" id='card-im'
+                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
+                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
+                                style='border-bottom:1px solid black;border-radius:0px;'>
+                            <div class="card-body">
+                                <center>Bootstrap Assignment
+                                    Guidelines 2019</center>
                             </div>
                         </div>
                     </div>
