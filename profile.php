@@ -39,12 +39,12 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container'>
-                <div class='row' style='padding-left:50px'>
-                    <div class='col-4'>
-                        <div style='text-align:left; color:black; padding-top:50px'>
+                <div class='row'>
+                    <div class='col-3' style='text-align:left;background-color:#E6E6E6'>
+                        <div style='color:black; padding-top:50px; padding-left:20px;'>
                             Description
                         </div>
-                        <div class='button' style='padding-top:100px;'>
+                        <div class='button' id='pro_btn' style='padding-top:100px;padding-left:20px;'>
                             <input style='width:40%;height:15%;color:#FEBA33' name="e_pro" class="btn btn-dark"
                                 value="Edit Profile" type="" id="e_pro">
                         </div>
@@ -52,21 +52,24 @@ include('header.php');
 
 
 
-                    <div class='col-4'>
+                    <div class='col-6' style='text-align:center;'>
                         <div>
-                            <img height='200px' width='200px' src="Assets/img/fac3.jpeg" alt="Card image cap"
+                            <img height='300px' width='300px' src="Assets/img/fac3.jpeg" alt="Card image cap"
                                 style='border:1px solid black;border-radius:50%'>
+                        </div>̱̱
+                        <div>
+                            <p style='color:black;'> Prof. Cherry Blossom</p>
                         </div>
                     </div>
 
 
-                    <div class='col-4'>
-                        <div style='text-align:left; color:black; padding-top:50px; padding-left:20px'>
+                    <div class='col-3 position-relative' style='text-align:left; background-color:#E6E6E6'>
+                        <div style='color:black; padding-top:50px; padding-left:20px;'>
                             Description
                         </div>
-                        <div class='button' style='padding-top:100px;padding-left:20px'>
+                        <div class='button position-absolute bottom-50 start-10' style='padding-top:100px;padding-left:20px'>
                             <input style='width:40%;height:15%;color:#FEBA33' name="e_pro" class="btn btn-dark"
-                                value="Edit Profile" type="" id="e_pro">
+                                value="Upload File" type="" id="e_pro">
                         </div>
                     </div>
                 </div>

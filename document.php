@@ -88,10 +88,10 @@ include('header.php');
                                 <img height='200px' width='200px' src="Assets/img/under.webp"
                                     style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
                             </div>
-                            <div class='col-8' style='text-align:left;padding-top:5%'>
-                            <a href="document.php" style="text-decoration: none; color:black;"><h3>Web Systems Design
+                            <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
+                                <h3>Web Systems Design
                                     & Management</h3>
-                                <p>INFS 634</p></a>
+                                <p>INFS 634</p>
                             </div>
                         </div>
                     </div>
@@ -103,9 +103,9 @@ include('header.php');
                                     style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
                             </div>
                             <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
-                            <a href="document.php" style="text-decoration: none; color:black;"><h3>Web Systems Design
+                                <h3>Web Systems Design
                                     & Management</h3>
-                                <p>INFS 634</p></a>
+                                <p>INFS 634</p>
                             </div>
                         </div>
                     </div>

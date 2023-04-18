@@ -45,19 +45,17 @@ include('header.php');
                             <img class="card" src="Assets/img/under.webp" alt="Card image cap"
                                 style='border-bottom:1px solid black;border-radius:0px;'>
                             <div class="card-body">
-                                <center>Undergraduate</center>
+                                <center><a href="schools.php" style="text-decoration: none; color:black" >Undergraduate</a></center>
                             </div>
                         </div>
                     </div>
-
-
 
                     <div class='col-4'>
                         <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
                             <img class="card"src="Assets/img/Graduate.jpeg" alt="Card image cap"
                                 style='border-bottom:1px solid black;border-radius:0px;'>
                             <div class="card-body">
-                                <center>Graduate</center>
+                                <center><a href="schools.php" style="text-decoration: none; color:black;" >Graduate</a></center>
                             </div>
                         </div>
                     </div>
@@ -68,7 +66,7 @@ include('header.php');
                             <img class="card" src="Assets/img/diploma.webp" alt="Card image cap"
                                 style='border-bottom:1px solid black;border-radius:0px;'>
                             <div class="card-body">
-                                <center>Certifications & Diplomas</center>
+                                <center><a href="schools.php" style="text-decoration: none; color:black;" >Certifications & Diplomas</a></center>
                             </div>
                         </div>
                     </div>

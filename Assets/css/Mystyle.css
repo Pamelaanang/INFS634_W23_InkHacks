@@ -52,16 +52,29 @@ body {
 
 #floatRightClear {
   float: right;
+  font-family: 'Source Serif Pro';
 }
 
 #rmpadding{
   padding-left: 0px;
   padding-right:0px;
+  font-family: 'Source Serif Pro';
 }
 
 input {
   text-align: center;
+  font-family: 'Source Serif Pro';
 }
 ::-webkit-input-placeholder {
   text-align: center;
+  font-family: 'Source Serif Pro';
 }
+
+/* #pro_btn{
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+} */
+/* .btn-warning{
+  
+} */

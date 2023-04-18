@@ -7,8 +7,8 @@ class lecturer_class extends db_connection
 	public function add_new_lecturer($l_fname, $l_email, $l_number, $l_password, $l_description, $l_photo)
 	{
 		//Write the sql to add a lecturer
-		$sql = "INSERT INTO lecturers (`l_fname`, `l_email`, `l_number`, `l_password`, `l_description`,`l_photo`)
-		 VALUES ('$l_fname', '$l_email', '$l_number', '$l_password', '$l_description', '$l_photo')";
+		$sql = "INSERT INTO lecturers (`l_fname`, `l_email`, `l_number`, `l_password`, `l_description`,`l_photo`,`l_role`)
+		 VALUES ('$l_fname', '$l_email', '$l_number', '$l_password', '$l_description', '$l_photo', 2)";
 
 		//return the executed the query
 		return $this->db_query($sql);
