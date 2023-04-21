@@ -1,5 +1,7 @@
 <?php
 
+include(dirname(__FILE__) . "/Settings/db.php");
+
 include('header.php');
 ?>
 
@@ -24,16 +26,34 @@ include('header.php');
             <div class='row'>
                 <div class="col-10" style='padding-left:50px;height:20%;padding-top:20px'>
                     <br>
-                    <h2><b>Graduate Schools </b></h2>
+                    <h2><b>
+                            <?php
+
+                            $sid = $_GET['sid'];
+                            $pid = $_GET['pid'];
+
+                            $query = "SELECT * FROM schools s JOIN program p ON (s.program_id = p.program_id) 
+                            WHERE p.program_id = $pid";
+                            $result = $conn->query($query);
+                            $row = $result->fetch(PDO::FETCH_ASSOC);
+
+                            echo $row['program_name']; ?>:
+                            <?php
+
+                            echo $row['school_name'];
+                            ?>
+
+
+                        </b></h2>
                     <small>Your future starts now. Graduate school is the beginning of many
                         possibilities.</small>
                     <div class='row'>
                         <div style='padding-top:25px'>
-                            <a href="programs.php" style='text-decoration:none; color:black'> Programs</a>
+                            <a href="#" style='text-decoration:none; color:black'> Programs</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="schools.php" style='text-decoration:none; color:black'> Schools</a>
+                            <a href="#" style='text-decoration:none; color:black'> Schools</a>
 
 
                             <i class="bi bi-arrow-right"></i>
@@ -80,36 +100,56 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container'>
+
                 <div class='row'>
-                    <div class='col-6'>
-                        <div class='row'
-                            style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
-                            <div class='col-4'>
-                                <img height='200px' width='200px' src="Assets/img/under.webp"
-                                    style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
-                            </div>
-                            <div class='col-8' style='text-align:left;padding-top:5%'>
-                            <a href="document.php" style="text-decoration: none; color:black;"><h3>Web Systems Design
-                                    & Management</h3>
-                                <p>INFS 634</p></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-6'>
-                        <div class='row'
-                            style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
-                            <div class='col-4'>
-                                <img height='200px' width='200px' src="Assets/img/under.webp"
-                                    style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
-                            </div>
-                            <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
-                            <a href="document.php" style="text-decoration: none; color:black;"><h3>Web Systems Design
-                                    & Management</h3>
-                                <p>INFS 634</p></a>
+                    <?php
+
+                    $query = "SELECT * FROM courses c JOIN lecturers l ON (c.l_id = l.l_id)" ; //creating query
+                    $query_exc = $conn->query($query);
+                    while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+                        $cid = $results['course_id'];
+                      
+
+                        ?>
+                        <div class='col-5'>
+                            <div class='row' style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
+                                <div class='col-4' style="overflow: hidden">
+                                    <img height='200px' min-width="100%" src="<?php echo $results['course_img'] ?>"
+                                        style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
+                                </div>
+                                <div class='col-8' style='text-align:left;padding-top:5%'>
+                                    <a href="document.php?cid=<?php echo  $cid ?>" style="text-decoration: none; color:black;">
+                                        <h3><?php echo $results['course_name'] ?></h3>
+                                        <p><?php echo $results['course_code'] ?></p>
+                                        <p><?php echo $results['l_fname'] ?></p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                        <div class='col-2'></div>
+
+                        <!-- <div class='col-5'>
+                            <div class='row' style="border:1px solid black;border-radius:10px; background-color:#FEBA33;">
+                                <div class='col-4' style="overflow: hidden">
+                                    <img height='200px' min-width="100%" src="Assets/img/under.webp"
+                                        style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
+                                </div>
+                                <div class='col-8' style='color:black; text-align:left;padding-top:5%'>
+                                    <a href="document.php" style="text-decoration: none; color:black;">
+                                        <h3>Web Systems Design
+                                            & Management</h3>
+                                        <p>INFS 634</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <?php
+
+                    }
+                    ?>
                 </div>
+
             </div>
         </div>
     </div>

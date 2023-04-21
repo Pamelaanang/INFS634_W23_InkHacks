@@ -65,14 +65,14 @@
           <div class='col-6'>
 
             <div class='row'>
-              <div class="card" id='card-in' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+              <div class="card" id='card-in' style="width:18rem;height:15rem;">
                 <img class="card-img-top" style='padding:20px;' src="Assets/img/lms.png" alt="Card image cap">
                 <div class="card-body">
                   <center>What?</center>
                 </div>
               </div>
 
-              <div class="card" id='card-in' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;margin-left:5%">
+              <div class="card" id='card-in' style="width:18rem;height:15rem;margin-left:5%">
                 <img class="card-img-top" style='padding:22px;' src="Assets/img/learn.jpeg" alt="Card image cap">
                 <div class="card-body">
                   <center>When?</center>
@@ -84,7 +84,7 @@
             <br>
 
             <div class='row'>
-              <div class="card" id='card-in' style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;">
+              <div class="card" id='card-in' style="width:18rem;height:15rem">
                 <img class="card-img-top" style='padding:20px;' height='180' width='45' src="Assets/img/2023.png"
                   alt="Card image cap">
                 <div class="card-body">
@@ -94,7 +94,7 @@
 
 
               <div class="card" id='card-in' height='50px'
-                style="width:18rem;height:15rem;border:1px solid black;border-radius:0px;margin-left:5%">
+                style="width:18rem;height:15rem;margin-left:5%">
                 <img class="card-img-top" style='padding:20px;' src="Assets/img/des.jpeg" alt="Card image cap">
                 <div class="card-body">
                   <center>Who?</center>

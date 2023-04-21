@@ -6,22 +6,6 @@ $TimeDate = $date->format('Y-m-d H:i:s');
 
 require 'Settings/db_class.php'; //load credentials 
 
-// if (!empty($_POST['email']) && !empty($_POST['password'])) { //check if email and password is submitted using POST method
-
-//     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //PHP Hashing for password
-//     //Extracting data from the database 
-//     $sql = "INSERT INTO `lecturers` (`l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`, `l_photo`) 
-//     VALUES (NULL, '" . $_POST['l_name'] . "', '" . $_POST['l_email'] . "', '" . $_POST['l_number'] . "', '" . $password . "', '" . $_POST['l_description'] . "', '" . $_POST['l_photo'] . "')";
-//     $stmt = $conn->prepare($sql);
-//     //Creating New Event
-//     if ($stmt->execute()) { //executing query to update the database 
-
-//         $message = "Account Created"; //Message to show account was created
-//     } else {
-//         $message = "Error was encountered in creating account."; //Message to show error in creating account 
-//     }
-// }
-
 include('header.php');
 
 ?>
@@ -106,8 +90,7 @@ include('header.php');
                                     </div>
                                     <div class='col-6'>
                                         <div class="form-group" style='padding-top:5%'>
-                                            <input type="file" class="form-control" id="l_photo" name="l_photo"
-                                                placeholder="Retype Password">
+                                            <input type="file" class="form-control" id="l_photo" name="l_photo">
                                         </div>
                                     </div>
                                 </div>

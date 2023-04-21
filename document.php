@@ -1,6 +1,7 @@
 <?php
-
 include('header.php');
+
+include(dirname(__FILE__) . "/Settings/db.php");
 ?>
 
 
@@ -29,15 +30,15 @@ include('header.php');
                         possibilities.</small>
                     <div class='row'>
                         <div style='padding-top:25px'>
-                            <a href="programs.php" style='text-decoration:none; color:black'> Programs</a>
+                            <a href="#" style='text-decoration:none; color:black'> Programs</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="schools.php" style='text-decoration:none; color:black'> Schools</a>
+                            <a href="#" style='text-decoration:none; color:black'> Schools</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="courses.php" style='text-decoration:none; color:black'> Courses</a>
+                            <a href="#" style='text-decoration:none; color:black'> Courses</a>
 
 
                             <i class="bi bi-arrow-right"></i>
@@ -76,7 +77,7 @@ include('header.php');
 
                 <button style="background-color:#BFBFBF;width:120px; height:30px;padding-top:2px;"
                     onclick="this.style.backgroundColor='#FEBA33'" class='btn btn-warning' style='color:black;'>
-                    Slides</button>
+                    Slides PDF</button>
 
             </div>
         </div>
@@ -86,60 +87,76 @@ include('header.php');
         <div class="wrapper">
             <div class='container'>
                 <div class='row'>
-                    <div class='col-3'>
-                        <div class="card" id='card-im'
-                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
-                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Proposal Guidelines From 2021</center>
+
+                    <?php
+
+                    // $query = "SELECT * FROM `document`"; //creating query
+                    $query = "SELECT * FROM document JOIN courses ON document.doc_id = courses.course_id 
+                    JOIN lecturers ON courses.course_id = lecturers.l_id";
+                    $query_exc = $conn->query($query);
+                    while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+                        $did = $results['doc_id'];
+
+
+
+                        ?>
+
+                        <div class='col-3'>
+                            <div class="card" id='card-im'
+                                style=" width: 300px; height: 400px; border:1px solid black;border-radius:0px;">
+                                <embed height='400px' class="card" src="<?php echo $results['pdf_data'] ?>"
+                                    type="application/pdf" alt="Card image cap"
+                                    style='border-bottom:1px solid black;border-radius:0px;'>
+
+                                <div class="card-body">
+                                    <a href="view.php?did=<?php echo $did ?>" style='text-decoration: none;color:black'>
+                                        <center>
+                                            <?php echo $results['doc_name'] ?>
+                                        </center>
+                                    </a>
+
+                                    <?php
+                                    // if (isset($_SESSION["l_id"]) && $_SESSION["l_id"] == $results['l_id']) {
+                                    //     echo "<a href='#' onclick='deleteItem()' ><span style='color:#017CDA'
+                                    //          class='bi bi-trash'></span></a>
+                                    //          ";
+                                    // }
+
+
+                                    ?>
+                                    <script>
+                                        // function deleteItem() {
+                                        //     $query = "UPDATE document SET `d_role` = '1' WHERE `did` = $did";
+                                        //     $query_exc = $conn -> query($query);
+                                        //     console.log('Item deleted');
+                                        // }
+                                    </script>
+                                </div>
+
                             </div>
+                            <br>
                         </div>
-                    </div>
-                    <div class='col-3'>
-                        <div class="card" id='card-im'
-                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
-                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Logo Assignment
-                                    Guidelines 2020</center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-3'>
-                        <div class="card" id='card-im'
-                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
-                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Figma Assignment
-                                    Guidelines 2019</center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-3'>
-                        <div class="card" id='card-im'
-                            style=" width: 300px; height: 500px; border:1px solid black;border-radius:0px;">
-                            <img height='400px' class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Bootstrap Assignment
-                                    Guidelines 2019</center>
-                            </div>
-                        </div>
-                    </div>
+
+                        <?php
+                    }
+
+                    ?>
+
                 </div>
+
+
             </div>
         </div>
     </div>
     <br>
 
 
+
     <?php include('footer.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
 
 </body>
 

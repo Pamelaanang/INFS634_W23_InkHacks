@@ -7,6 +7,8 @@ session_start();
 //connnect to the controller
 require("../Controllers/lec_controller.php");
 
+// require(dirname(__FILE__)."../Controllers/lec_controller.php");
+
 
 //check if login button was clicked 
 if (isset($_POST['signin'])) {
@@ -34,6 +36,7 @@ if (isset($_POST['signin'])) {
             $_SESSION["l_fname"] = $check_login[0]['l_fname'];
             $_SESSION["l_description"] = $check_login[0]['l_description'];
             $_SESSION["l_email"] = $check_login[0]['l_email'];
+            $_SESSION["l_photo"] = $check_login[0]['l_photo'];
 
 
 
@@ -41,7 +44,7 @@ if (isset($_POST['signin'])) {
             ?>
             <script type="text/javascript">
                 alert("Access Permitted");
-                window.location.href = "../profile.php";
+                window.location.href = "../pro_view.php";
             </script>
             <?php
             //to make sure the code below does not execute after redirection

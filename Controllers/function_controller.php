@@ -1,6 +1,6 @@
 <?php
 //connect to the program class
-require("../Classes/function_class.php");
+require("Classes/function_class.php");
 
 
 //view all program function

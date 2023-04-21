@@ -10,6 +10,8 @@ class lecturer_class extends db_connection
 		$sql = "INSERT INTO lecturers (`l_fname`, `l_email`, `l_number`, `l_password`, `l_description`,`l_photo`,`l_role`)
 		 VALUES ('$l_fname', '$l_email', '$l_number', '$l_password', '$l_description', '$l_photo', 2)";
 
+		
+
 		//return the executed the query
 		return $this->db_query($sql);
 
@@ -41,7 +43,8 @@ class lecturer_class extends db_connection
 	public function verify_lec_login($l_email)
 	{
 		//sql query 
-		$sql = "SELECT `l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`,`l_photo` FROM lecturers WHERE l_email = '$l_email'";
+		$sql = "SELECT `l_id`, `l_fname`, `l_email`, `l_number`, `l_password`, `l_description`,`l_photo` FROM lecturers 
+		WHERE l_email = '$l_email'";
 		//return the executed query
 		if ($this->db_query($sql)) {
 			return $this->db_fetch();

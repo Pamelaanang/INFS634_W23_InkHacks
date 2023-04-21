@@ -1,11 +1,14 @@
 <?php
 //connect to the product class
 
-// include(dirname(__FILE__)."/Classes/lecturer_class.php");
-require("../Classes/lecturer_class.php");
+include(dirname(__FILE__)."/Classes/lecturer_class.php");
+
+
+// require("../Classes/lecturer_class.php");
 
 function add_new_lecturer_function($l_fname, $l_email, $l_number, $l_password, $l_description, $l_photo)
 {
+    echo'yow';
 	//create an instance of lecturer class
 	$new_lecturer_object = new lecturer_class();
 
@@ -24,16 +27,17 @@ function view_all_lecturer_fuction()
 {
 	//Create an array variable
 	$lecturer_array = array();
+    echo'hi';
 
 	//create an instance of the lecturer class
 	$lecturer_object = new lecturer_class();
 
 	//run the view all lecturer method
 	$lecturer_records = $lecturer_object->view_all_lecturers();
-
+   
 	//check if the method worked
 	if ($lecturer_records) {
-
+      
 		//loop to see if there is more than one result
 		//fetch one at a time
 		while ($one_record = $lecturer_object->db_fetch()) {
@@ -86,7 +90,7 @@ function edit_lecturer_lecturer_function($l_id, $l_fname, $l_number, $l_password
 {
 	//create an instance of the lecturer class
 	$lecturer_lecturer_object = new lecturer_class();
-	
+
 	//run the edit one contacat method
 	$edit_lecturer_lecturer = $lecturer_lecturer_object->edit_one_lecturer($l_id, $l_fname, $l_number, $l_password, $l_description, $l_photo);
 
@@ -119,30 +123,30 @@ function verify_lec_login_fxn($l_email)
 }
 
 
-function lec_login_details_function($l_id)
-{
-	$newlec_Object = new lecturer_class;
+// function lec_login_details_function($l_id)
+// {
+// 	$newlec_Object = new lecturer_class;
 
-	$return_lec = $newlec_Object->lec_login_details($l_id);
-	if ($return_lec) {
-		return $return_lec;
-	} else {
-		return false;
-	}
+// 	$return_lec = $newlec_Object->lec_login_details($l_id);
+// 	if ($return_lec) {
+// 		return $return_lec;
+// 	} else {
+// 		return false;
+// 	}
 
-}
+// }
 
-function lec_last_activity_function($l_id)
-{
-	$newlec_Object = new lecturer_class;
+// function lec_last_activity_function($l_id)
+// {
+// 	$newlec_Object = new lecturer_class;
 
-	$return_lec = $newlec_Object->lec_last_activity($l_id);
-	if ($return_lec) {
-		return $return_lec;
-	} else {
-		return false;
-	}
+// 	$return_lec = $newlec_Object->lec_last_activity($l_id);
+// 	if ($return_lec) {
+// 		return $return_lec;
+// 	} else {
+// 		return false;
+// 	}
 
-}
+// }
 
 ?>

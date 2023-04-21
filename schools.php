@@ -1,4 +1,5 @@
 <?php
+include(dirname(__FILE__) . "/Settings/db.php");
 
 include('header.php');
 ?>
@@ -29,7 +30,7 @@ include('header.php');
                         possibilities.</small>
                     <div class='row'>
                         <div style='padding-top:25px'>
-                            <a href="programs.php" style='text-decoration:none; color:black'> Programs</a>
+                            <a href="#" style='text-decoration:none; color:black'> Programs</a>
                             <i class="bi bi-arrow-right"></i>
 
                             <button onclick="window.location.href = '#';" class='btn btn-warning'
@@ -50,26 +51,52 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container'>
-                <div class='row' style="border:1px solid black;border-radius:10px; background-color:#FEBA33">
 
-                    <div class='col-2'>
-                        <img height='200px' width='200px' src="Assets/img/under.webp"
-                            style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
-                    </div>
-                    <div class='col-8' style='color:black; text-align:center;padding-top:5%'>
-                        <h2><b>School of Information Studies </b></h2>
-                        <small>Your center for Library & Archival Studies, Knowledge Management UX/UI, Data
-                            Analysis</small>
-                    </div>
-                    <div class='col-2'>
-                        <div class='button position-absolute bottom-50 start-10'
-                            style='padding-top:100px;padding-left:20px'>
-                            <button onclick="window.location.href = 'courses.php';" class='btn btn-warning'
-                                style='width: 100px; height: 45px; color:#FEBA33; background-color:black; border-radius:5px'>
-                                View</button>
+
+                <?php
+
+                $pid = $_GET['pid'];
+
+                $query = "SELECT * FROM `schools` WHERE program_id = $pid"; //creating query
+                $query_exc = $conn->query($query);
+                while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+                    $sid = $results['school_id'];
+
+
+                    ?>
+
+                    <div class='row' style="border:1px solid black;border-radius:10px; background-color:#FEBA33">
+                        <div class='col-2'>
+                            <img height='200px' width='200px' src="<?php echo $results['school_img'] ?>"
+                                style='padding-left:20px; padding-top:20px; padding-bottom:20px;'>
+                        </div>
+                        <div class='col-8' style='color:black; text-align:center;padding-top:5%'>
+                            <h2><b>
+                                    <?php echo $results['school_name'] ?>
+                                </b></h2>
+                            <small><b>Faculty:</b>
+                                <?php echo $results['dept_name'] ?>
+                            </small>
+                            <br>
+                            <small>
+                                <?php echo $results['school_desc'] ?>
+                            </small>
+                        </div>
+                        <div class='col-2'>
+                            <div class='button' style='padding-top:80px;padding-left:20px'>
+                                <button onclick="window.location.href = 'courses.php?sid=<?php echo $sid ?>&pid=<?php echo $pid ?>';"
+                                    class='btn btn-warning'
+                                    style='width: 100px; height: 45px; color:#FEBA33; background-color:black; border-radius:5px'>
+                                    View</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <br>
+                    <?php
+                }
+
+                ?>
+
             </div>
         </div>
         <br>

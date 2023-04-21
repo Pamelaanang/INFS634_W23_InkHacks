@@ -49,7 +49,7 @@ include('header.php');
                                 </div>
                                 <div class="form-group" style='padding-top:5%; padding-left:27%'>
                                     <input type="password" class="form-control" id="l_pass" name="l_pass"
-                                        placeholder="Passowrd" style='width:60%'>
+                                        placeholder="Password" style='width:60%'>
                                 </div>
         
                                 <div class="form-element" style='padding-top:15px;padding-left:40%'>

@@ -1,6 +1,11 @@
 <?php
+// include(dirname(__FILE__) . "/Controllers/pro_controller.php");
+
+include(dirname(__FILE__) . "/Settings/db.php");
 
 include('header.php');
+
+
 ?>
 
 
@@ -40,46 +45,49 @@ include('header.php');
         <div class="wrapper">
             <div class='container'>
                 <div class='row'>
-                    <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card" src="Assets/img/profile.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Undergraduate</center>
+
+                    <?php
+
+                    $query = "SELECT * FROM `lecturers`"; //creating query
+                    $query_exc = $conn->query($query);
+                    while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+                        $lid = $results['l_id'];
+
+
+                        ?>
+
+                        <div class='col-4'>
+                            <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
+                                <img class="card" src="<?php echo $results['l_photo'] ?>" alt="Card image cap"
+                                    style='border-bottom:1px solid black;border-radius:0px;overflow:hidden;max-height:251px'>
+                                <div class="card-body">
+                                    <a href="profile.php?lid=<?php echo $lid ?>" style='text-decoration: none;color:black'>
+                                        <center>
+                                            <?php
+                                            echo $results['l_fname'];
+                                            ?>
+                                        </center>
+                                    </a>
+                                </div>
+
                             </div>
+                            <br>
                         </div>
-                    </div>
 
+                        <?php
+                    }
 
+                    ?>
 
-                    <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card"src="Assets/img/fac3.jpeg" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Graduate</center>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card" src="Assets/img/fac33.jpeg" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center>Certifications & Diplomas</center>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
+
             </div>
         </div>
-        <br>
+    </div>
+    <br>
 
 
-    </div>
-    </div>
 
     <?php include('footer.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

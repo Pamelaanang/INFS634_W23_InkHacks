@@ -1,6 +1,11 @@
 <?php
-
 include('header.php');
+
+include(dirname(__FILE__) . "/Settings/db.php");
+
+
+
+
 ?>
 
 
@@ -63,7 +68,48 @@ include('header.php');
 
         <div class="wrapper">
             <div class='container'>
-              
+                <?php
+
+                $did = $_GET['did'];
+
+                // echo $lid;
+                
+                $query = "SELECT * FROM document JOIN courses ON document.doc_id = courses.course_id 
+                JOIN lecturers ON courses.course_id = lecturers.l_id WHERE document.doc_id =  $did"; //creating query
+                $query_exc = $conn->query($query);
+                while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+
+                    ?>
+
+                    <p style='color:black'>
+                        <?php echo $results['doc_name'] ?>
+                    </p>
+                    <object data="<?php echo $results['pdf_data']; ?>" type="application/pdf" width="100%" height="600px">
+                        <p>Your browser doesn't support PDF viewing. You can
+                            <a href="data:application/pdf;base64,<?php echo $pdf_base64; ?>" download>download the PDF
+                                file</a> instead.
+                        </p>
+                    </object>
+
+                    <br>
+
+                    <div style='padding-top:5%;'>
+                        <p style='color:black'>
+                            <?php echo $results['doc_desc'] ?> :  <?php echo $results['doc_type'] ?>
+                        </p>
+                        <p style='color:black'>
+                           Taught By: <?php echo $results['l_fname'] ?> on  <?php echo $results['doc_date'] ?>
+                        </p>
+                       
+
+                    </div>
+
+                    <?php
+                }
+
+                ?>
+
+
             </div>
         </div>
     </div>

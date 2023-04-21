@@ -1,5 +1,6 @@
 <?php
 // require("Controllers/function_controller.php");
+include(dirname(__FILE__) . "/Settings/db.php");
 
 include('header.php');
 ?>
@@ -36,55 +37,35 @@ include('header.php');
 
         </div>
 
-       
-        <br>
-        <div class="wrapper">
-            <div class='container'>
-        <?php 
-        // $program = view_all_program_fuction();
-                            
-        //                     if ($program) {
-                                
-        //                         foreach ($program as $prog) {
-                   
-        //                             //grab program info
-        //                            $program_id = $prog['program_id'];
-        //                            $program_name = $prog['program_name'];
-        //                            $program_img = $prog['program_img'];
-   
-        //                            echo "<div class='row'>".
-        //                            '<div class="col-4">'.
-        //                                "<div class='card' id='card-im' style='border:1px solid black;border-radius:0px;'>".
-        //                                    '<img class="card" src="'.$program_img.'" alt="Card image cap"
-        //                                        style="border-bottom:1px solid black;border-radius:0px;">'.
-        //                                    "<div class='card-body'>".
-        //                                        '<center><a href="schools.php?program_id=$program_id" style="text-decoration: none; color:black" >'. $prog['program_name']. '</a></center>
-        //                                    </div>
-        //                                </div>
-        //                            </div>';
-   
-        //                         }
-   
-        //                        }
-   
-        //                    echo "</ul>";
-                       ?>
 
+        <br>
 
         <div class="wrapper">
             <div class='container'>
                 <div class='row'>
-                    <div class='col-4'>
-                        <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
-                            <img class="card" src="Assets/img/under.webp" alt="Card image cap"
-                                style='border-bottom:1px solid black;border-radius:0px;'>
-                            <div class="card-body">
-                                <center><a href="schools.php" style="text-decoration: none; color:black" >Undergraduate</a></center>
+                    <?php
+
+                    $query = "SELECT * FROM `program`"; //creating query
+                    $query_exc = $conn->query($query);
+                    while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
+                        $pid = $results['program_id'];
+
+
+                        ?>
+                        <div class='col-4'>
+                            <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
+                                <img class="card" src="<?php echo $results['program_img'] ?>" alt="Card image cap"
+                                    style='border-bottom:1px solid black;border-radius:0px;'>
+                                <div class="card-body">
+                                    <center><a href="schools.php?pid=<?php echo $pid ?>"
+                                            style="text-decoration: none; color:black"> <?php
+                                            echo $results['program_name'];
+                                            ?></a></center>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class='col-4'>
+                        <!-- <div class='col-4'>
                         <div class="card" id='card-im' style="border:1px solid black;border-radius:0px;">
                             <img class="card"src="Assets/img/Graduate.jpeg" alt="Card image cap"
                                 style='border-bottom:1px solid black;border-radius:0px;'>
@@ -103,7 +84,11 @@ include('header.php');
                                 <center><a href="schools.php" style="text-decoration: none; color:black;" >Certifications & Diplomas</a></center>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                        <?php
+                    }
+
+                    ?>
                 </div>
             </div>
         </div>
