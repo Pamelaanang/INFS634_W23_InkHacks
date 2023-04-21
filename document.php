@@ -90,9 +90,12 @@ include(dirname(__FILE__) . "/Settings/db.php");
 
                     <?php
 
+                    $cid = $_GET['cid'];
+                
+
                     // $query = "SELECT * FROM `document`"; //creating query
                     $query = "SELECT * FROM document JOIN courses ON document.doc_id = courses.course_id 
-                    JOIN lecturers ON courses.course_id = lecturers.l_id";
+                    JOIN lecturers ON courses.course_id = lecturers.l_id WHERE courses.course_id = $cid";
                     $query_exc = $conn->query($query);
                     while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
                         $did = $results['doc_id'];

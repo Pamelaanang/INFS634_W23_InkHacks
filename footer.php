@@ -96,19 +96,16 @@
                     <div class='col-2'>
                       <input type="radio" id="angry" value='neutral' name="angry">
                       <label for="angry" style='color:black; font-size: 5rem' class="">&#128528</label>
-                      <!-- <i style='color:black; font-size: 5rem' class="bi bi-emoji-neutral"></i> -->
                     </div>
                     <div class='col-1'></div>
                     <div class='col-2'>
                       <input type="radio" id="angry" value='smiley' name="angry">
                       <label for="angry" style='color:black; font-size: 5rem' class="">&#128522</label>
-                      <!-- <i style='color:black; font-size: 5rem' class="bi bi-emoji-smile"></i> -->
                     </div>
                     <div class='col-1'></div>
                     <div class='col-2'>
                       <input type="radio" id="angry" value='happy' name="angry">
                       <label for="angry" style='color:black; font-size: 5rem' class="">&#128512</label>
-                      <!-- <i style='color:black; font-size: 5rem' class="bi bi-emoji-laughing"></i> -->
                     </div>
                     <div class='col-1'></div>
                   </div>
@@ -121,7 +118,7 @@
                     <div class='col-1'></div>
                     <div class='col-6'>
                       <input type="" value='Compliment'
-                        style='width:100%; height:60px; color:#white; background-color:#017CDA; border-color:black; border-radius:5px;' disabled>
+                        style='width:100%; height:60px; color:#FFFFFF; background-color:#017CDA; border-color:black; border-radius:5px;' disabled>
                     </div>
                   </div>
                   <br>

@@ -104,7 +104,7 @@ include('header.php');
                 <div class='row'>
                     <?php
 
-                    $query = "SELECT * FROM courses c JOIN lecturers l ON (c.l_id = l.l_id)" ; //creating query
+                    $query = "SELECT * FROM courses c JOIN lecturers l ON (c.l_id = l.l_id) WHERE `school_id`= $sid" ; //creating query
                     $query_exc = $conn->query($query);
                     while ($results = $query_exc->fetch(PDO::FETCH_ASSOC)) {
                         $cid = $results['course_id'];

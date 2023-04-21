@@ -1,6 +1,5 @@
 <?php
 
- 
 //connnect to the controller
 require("../Controllers/lec_controller.php");
 

@@ -194,17 +194,7 @@ if (isset($_POST['uload'])) {
                                             </b>
                                         </p>
                                     </div>
-                                    <!-- <div class="form-group" style='padding-left:15%'>
-                                        <label for='#nu_photo' style='color:black; text-align:center;'>
-                                            Upload a new image:
-                                        </label>
-                                        <div>
-                                            <input type="file" class="form-control" id="nu_photo" name="nu_photo"
-                                                style='width:100%;'>
-                                        </div>
-
-
-                                    </div> -->
+                                  
                                 </div>
 
                                 <div class='col-1'>
@@ -245,12 +235,6 @@ if (isset($_POST['uload'])) {
 
                                         <input style='width:100%;color:#FFFFFF;background-color: #017CDA' name='schange'
                                             id='schange' class="btn" value="Save Changes" type="submit">
-
-                                        <!-- <button type="submit" class="btn" name='schange' id='schange'
-                                        style='width:100%;color:#FFFFFF;background-color: #017CDA'
-                                        data-bs-toggle="modal" data-bs-target="#UploadModal">
-                                        Save Changes
-                                        </button> -->
                                     </div>
 
                                 </div>
