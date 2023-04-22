@@ -34,19 +34,19 @@ include(dirname(__FILE__) . "/Settings/db.php");
                         possibilities.</small>
                     <div class='row'>
                         <div style='padding-top:25px'>
-                            <a href="programs.php" style='text-decoration:none; color:black'> Programs</a>
+                            <a href="" style='text-decoration:none; color:black'> Programs</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="schools.php" style='text-decoration:none; color:black'> Schools</a>
+                            <a href="" style='text-decoration:none; color:black'> Schools</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="courses.php" style='text-decoration:none; color:black'> Courses</a>
+                            <a href="" style='text-decoration:none; color:black'> Courses</a>
 
                             <i class="bi bi-arrow-right"></i>
 
-                            <a href="document.php" style='text-decoration:none; color:black'> Type </a>
+                            <a href="" style='text-decoration:none; color:black'> Type </a>
 
                             <i class="bi bi-arrow-right"></i>
 
