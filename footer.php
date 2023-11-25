@@ -113,7 +113,7 @@
                   <div class='row'>
                     <div class='col-5'>
                       <input type="" value='Suggestion'
-                        style='width:120%; height:60px; color:#black; background-color:#FEBA33; border-color:black; border-radius:5px;' disabled>
+                        style='width:120%; height:60px; color: black; background-color:#FEBA33; border-color:black; border-radius:5px;' disabled>
                     </div>
                     <div class='col-1'></div>
                     <div class='col-6'>
